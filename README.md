@@ -12,7 +12,7 @@ Note: The outputs is using OnDrawGizmo - so make sure Gizmo is enabled on the un
 ## TODO
   - Normals
   - Better Step Animation
-  - Consdering using async task instead of co-routines
+  - Considering using async task instead of co-routines
  
 ## Issues with Algo
  - If some points are co-planar, some faces might not be generated
