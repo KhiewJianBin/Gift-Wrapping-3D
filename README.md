@@ -20,4 +20,4 @@ Note: The outputs is using OnDrawGizmo - so make sure Gizmo is enabled on the un
  2. If some points are co-planar, some faces might not be generated
  
 
-if any one has ideas on how to solve issue 1. i would love to hear your ideas, please contact me: frozonnorth@gmail.com
+if any one has ideas on how to solve issue 1. i would love to hear your ideas, please contact me: khiewbin@gmail.com

@@ -1,24 +1,37 @@
-using UnityEngine;
-
 using System;
 using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 
 using Random = UnityEngine.Random;
+using UnityEngine;
 
+[RequireComponent(typeof(MeshFilter))]
 public class GiftWrappingAnimate : MonoBehaviour
 {
+    [ReadOnlyWhenPlaying]
     [Range(4,50)]
     public int NumOfRandomPoints = 20;
-    public MeshFilter meshFilter;
 
-    List<Vector3> points = new List<Vector3>();
-    List<Vector3> verts = new List<Vector3>();
-    List<int> tris = new List<int>();
+    public bool autoStep = true;
+    public float LogicStepDuration = 0.1f;
+    float LogicStepTimer = 0;
+
+    //Data
+    readonly List<Vector3> points = new();
+    readonly List<Vector3> verts = new();
+    readonly List<int> tris = new();
+
+    //Display
+    MeshFilter meshFilter;
 
     bool isLogicPaused = true;
     bool UnpauseLogic() => !isLogicPaused;
+
+    void Awake()
+    {
+        meshFilter = GetComponent<MeshFilter>();
+    }
 
     void Start()
     {
@@ -30,15 +43,11 @@ public class GiftWrappingAnimate : MonoBehaviour
         StartCoroutine(GiftWrapping(points));
     }
 
-    public bool autoStep = true;
-    float LogicStepTimer = 0;
-    public float LogicStepDuration = 0.1f;
-
     void Update()
     {
         if(autoStep)
         {
-            //one per each LogicStepDuration time frame
+            //one step per each LogicStepDuration time frame
             LogicStepTimer += Time.deltaTime;
             if (LogicStepTimer >= LogicStepDuration)
             {
@@ -48,7 +57,7 @@ public class GiftWrappingAnimate : MonoBehaviour
         }
         else
         {
-            //one permouse click
+            //one step per mouse click
             if (Input.GetMouseButtonUp(0))
             {
                 isLogicPaused = false;
@@ -352,7 +361,6 @@ public class GiftWrappingAnimate : MonoBehaviour
     /// White Line : Starting Triangle To Rotate
     /// Dark Green Line : Possible Next Triangle/Face that lies on the Hull
     /// Magenta Line : Initial Points 
-    /// 
     /// </summary>
     void OnDrawGizmos()
     {
