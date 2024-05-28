@@ -7,8 +7,12 @@
 
 --------------
 
-Note: The outputs is using OnDrawGizmo - so make sure Gizmo is enabled on the unity Editor Scene/Game Window
+## Usage
+1. Open in Unity Editor
+2. Open Scene [GiftWrappingAnimate]
+3. Play 
 
+Note: The outputs is using OnDrawGizmo - so make sure Gizmo is enabled on the unity Editor Scene/Game Window
 
 ## TODO
   - Normals
