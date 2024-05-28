@@ -1,9 +1,11 @@
-# Gift Wrapping 3D
+# Gift Wrapping Animate
 - Gift Wrapping 3D Algo Visualization in Unity.
 - Generate Random points in sphere, and run the giftwrapping to create a mesh.
 - Created using Psudo Code Reference: https://www.cs.jhu.edu/~misha/Spring16/09.pdf Page 21-24
 - Uses Gizmo to draw and visualize output.
-- Uses a messy co-routine implementation for the Algo Visualize.
+- Uses a simple co-routine implementation for the Algo Visualize.
+
+https://github.com/KhiewJianBin/GiftWrappingAnimate/assets/5699978/90efc10b-d045-44b0-8327-8be37e7b9d2b
 
 --------------
 
