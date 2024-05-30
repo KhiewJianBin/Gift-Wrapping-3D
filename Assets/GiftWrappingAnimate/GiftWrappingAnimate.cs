@@ -57,8 +57,7 @@ public class GiftWrappingAnimate : MonoBehaviour
         }
         else
         {
-            //one step per mouse click
-            if (Input.GetMouseButtonUp(0))
+            if (Input.GetKeyUp(KeyCode.Space))
             {
                 isLogicPaused = false;
             }
