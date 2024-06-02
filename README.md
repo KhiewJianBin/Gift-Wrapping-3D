@@ -1,4 +1,4 @@
-# Gift Wrapping Animate
+# Gift Wrapping in Unity C# (Animated)
 - Gift Wrapping 3D Algo Visualization in Unity.
 - Generate Random points in sphere, and run the giftwrapping to create a mesh.
 - Created using Psudo Code Reference: https://www.cs.jhu.edu/~misha/Spring16/09.pdf Page 21-24
